@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  div(class="emailError")
+    h2= error
+
+  div(id="log_in_page")
+    div(id="Login")
+      form(id="log_in_form", name="signup", method="post")
+
+        div(class="label_box")
+          label(for="email") Email Address: 
+        input(type="text", name="email", required)
+
+        div(class="label_box")
+          label(for="fname") First Name: 
+        input(type="text", name="fname", required)
+
+        div(class="label_box")
+          label(for="lname") Last Name: 
+        input(type="text", name="lname", required)
+
+        div(class="label_box")
+          label(for="password") Password: 
+        input(type="text", name="password", required)
+        p
+        button(id="submit", name="submit", type="submit") Sign Up

@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
+
+script.
+  function toLogIn() {
+    window.location.href = 'users/login'
+  }
+  function toSignUp() {
+    window.location.href = 'users/signup'
+  }
