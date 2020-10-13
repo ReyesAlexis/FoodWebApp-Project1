@@ -1,121 +1,110 @@
 body {
-    background-color:#D7D7D9;
-    font-family: 'Montserrat', sans-serif;
+  background-color: whitesmoke;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-.col-lg {
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-    height: 50%;
-    padding: 10px 10px 10px 10px;
+.col-sm {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  height: 50%;
+  
 }
 
-.col-lg img {
-    height: 100%;
-    width: 100%;
+.col-sm img {
+  height: 100%;
+  width: 100%;
+  border-radius: 28px;
+  border: 2px solid;
 }
 
 button {
-    border: none;
-    background: none;
-    font-family: sans-serif;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #FFFFFF;
+  background-color: #4eb5f1;
+  text-align: center;
+  transition: all 0.2s;
 }
 
 button:hover {
-    background-color: #8C2F1B;
+  background-color: #4095c6;
 }
 
+button:focus {
+  outline: none;
+}
+
+
 .left {
-    background-color: #5D8AA6;
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .right {
-    background-color: #5D8AA6;
+  margin-left: 10px;
 }
 
 
 .header {
-    overflow: hidden;
-    background-color: #BF7B3F;
-    padding: 20px 10px;
-  }
-  
+  overflow: hidden;
+  background-color: #000000;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 300%;
+}
+
+.header a:hover {
+  background-color: #5D8AA6;
+  color: white;
+}
+
+
+.header-right {
+  float: right;
+}
+
+@media only screen and (max-width: 575px) {
   .header a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
+    float: none;
+    display: block;
+    text-align: left;
   }
-  
-  .header a.logo {
-    font-family: 'Anton', sans-serif;
-    font-size: 300%;
-  }
-  
-  .header a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .header a.active {
-    color: black;
-  }
-  
+
   .header-right {
-    float: right;
-  }
-  
-  @media screen and (max-width: 500px) {
-    .header a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .header-right {
-      float: none;
-    }
+    float: none;
   }
 
-
-  footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #184059;
-    color: white;
-    text-align: center;
- }
+}
 
 
- /* Color Theme Swatches in Hex */
-.Travel-1-hex { color: #D7D7D9; }
-.Travel-2-hex { color: #184059; }
-.Travel-3-hex { color: #5D8AA6; }
-.Travel-4-hex { color: #BF7B3F; }
-.Travel-5-hex { color: #8C2F1B; }
-
-/* Color Theme Swatches in RGBA */
-.Travel-1-rgba { color: rgba(214, 214, 216, 1); }
-.Travel-2-rgba { color: rgba(24, 64, 89, 1); }
-.Travel-3-rgba { color: rgba(92, 137, 165, 1); }
-.Travel-4-rgba { color: rgba(191, 122, 63, 1); }
-.Travel-5-rgba { color: rgba(140, 47, 26, 1); }
-
-/* Color Theme Swatches in HSLA */
-.Travel-1-hsla { color: hsla(247, 2, 84, 1); }
-.Travel-2-hsla { color: hsla(202, 57, 22, 1); }
-.Travel-3-hsla { color: hsla(202, 29, 50, 1); }
-.Travel-4-hsla { color: hsla(28, 50, 49, 1); }
-.Travel-5-hsla { color: hsla(11, 68, 32, 1); }
+footer {
+  padding-top: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
