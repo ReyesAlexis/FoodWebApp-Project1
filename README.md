@@ -8,10 +8,10 @@
 ### HTML:
 - views/-
 - .jade files are essentially html files with different syntax
+- first create the HTML, then using an 'html to jade' converter, convert the file to jade syntax
 - these .jade pages are rendered within the GET routes, taking in parameters for variables if needed
 ### CSS:
 - public/stylesheets/styles.css
-- css is used as normal
 - elements can be referenced through classes/ids from the .jade files --> for example: h1(class="h1Class")
 ### DB:
 - data/users.json
@@ -32,12 +32,16 @@
 ### LOGIN/SIGNUP:
 - add css
 ### HOMEPAGE:
-- implementation of photo voting
+- home.jade
 - create a new db instance for the images & be able to link them to user's email --> db.connect('./data', ['images']);
 - create a button that allows a user to add their own image (can be a separate route/page)
-- add css
-### LEADERBOARDS: 
+### LEADERBOARD: 
+- leaderboard.jade
 - get all images and order them by the number of votes they have
 - display on screen & add css
+### ABOUT:
+- about.jade
+- write out an 'about' section
+- add css
 ### LOGOUT:
 - button that deletes req.session.user and redirects back to /index
