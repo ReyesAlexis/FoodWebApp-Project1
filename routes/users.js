@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 /* GET login page. */
 router.get('/login', function(req, res, next) {
   db.connect('./data', ['users']);
-  res.render('login', { title: 'Food Blog' , error: req.session.errors});
+  res.render('login', { title: 'Food Wars' , error: req.session.errors});
   delete req.session.errors;
 });
 
@@ -34,7 +34,7 @@ router.post('/login', function(req, res, next) {
 /* GET sign up page. */
 router.get('/signup', function(req, res, next) {
   db.connect('./data', ['users']);
-  res.render('signup', { title: 'Food Blog', error: req.session.errors});
+  res.render('signup', { title: 'Food Wars', error: req.session.errors});
   delete req.session.errors;
 });
 
