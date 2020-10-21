@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var db = require("diskdb");
+//var path = require('path');
+//var app = express();
+
+//app.use(express.static(path.join(__dirname, 'public')));
 
 // HELPER FUNCTION CHECKS IF USER IS ALREADY LOGGED IN
 function checkSignIn(req, res, next) {
@@ -24,6 +28,14 @@ router.get('/leaderboard', checkSignIn, function(req, res) {
     db.connect('./data', ['users']);
     user = req.session.user; // the logged in user
     res.render('leaderboard', { title: 'Leaderboard' , name: user.fname + " " + user.lname});
+});
+
+/* get votes.json; the file path needs to be changed when running on different system */
+router.get('/votes.json', checkSignIn, function (req, res) {
+    db.connect('./data', ['votes']);
+    //res.sendFile(db);
+    res.sendFile('C:/Users/Haowen Yong/Desktop/fall 2020/cpsc349/projects/FoodWebApp-Project1/data/votes.json');
+    //res.sendFile('PathTo/votes.json');
 });
 
 /* GET about page. */

@@ -1,1 +1,42 @@
-extends layout
+html
+  head
+    script(type='text/javascript' src='https://www.gstatic.com/charts/loader.js')
+    script(type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(type='text/javascript').
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+      'use strict';
+      $.ajax({
+      url: "votes.json",
+      dataType: "json",
+      }).done(function (jsonData) {
+        console.log(jsonData);
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'img_name');
+      data.addColumn('number', 'number_of_upvotes');
+      //jsonData = JSON.parse(jsonData);
+      //jsonData.forEach(function (row) {
+      jsonData.forEach(function (row) {
+      data.addRow([
+      row.name,
+      row.votes
+      ]);
+      });
+      //console.log(data);
+      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+      var options = {
+      title: 'Leaderboard',
+      width: 400,
+      height: 240,
+      pieSliceText: 'value'
+      };
+      chart.draw(data, options);
+      }).fail(function (jq, text, err) {
+      console.log(text + ' - ' + err);
+      });
+      }
+  body
+    header
+      h1 Test......
+    #chart_div(style='width: 900px; height: 500px;')
