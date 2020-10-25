@@ -35,7 +35,7 @@ router.get('/votes.json', checkSignIn, function (req, res) {
     db.connect('./data', ['votes']);
     //res.sendFile(db);
     res.sendFile('C:/Users/Haowen Yong/Desktop/fall 2020/cpsc349/projects/FoodWebApp-Project1/data/votes.json');
-    //res.sendFile('PathTo/votes.json');
+    // change above line to: res.sendFile('YourPathTo/votes.json');
 });
 
 /* GET about page. */
