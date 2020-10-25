@@ -1,5 +1,5 @@
 body {
-  background-color: whitesmoke;
+  background-color: white;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -29,17 +29,17 @@ button {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   color: #FFFFFF;
-  background-color: #4eb5f1;
+  background-color: red;
   text-align: center;
   transition: all 0.2s;
 }
 
 button:hover {
-  background-color: #4095c6;
+  background-color: black;
 }
 
 button:focus {
-  outline: none;
+  outline: black;
 }
 
 
@@ -75,7 +75,7 @@ button:focus {
 }
 
 .header a:hover {
-  background-color: #5D8AA6;
+  background-color: red;
   color: white;
 }
 
@@ -99,12 +99,12 @@ button:focus {
 
 
 footer {
-  padding-top: 10px;
+  padding-top: 4 px;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: grey;
+  background-color: black;
   color: white;
   text-align: center;
 }

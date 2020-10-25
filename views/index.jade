@@ -1,10 +1,19 @@
 extends layout
+<div class="grandParentContaniner">
+<div class="parentContainer">
+<form>
+
 
 block content
+
   h1= title
   p Welcome to #{title}
 
   button(id="login" name="login" onclick="toLogIn()") Login
   p New User?
   button(id="signUp" name="signUp" onclick="toSignUp()") Sign Up
+
+  <form>
+  </div>
+  </div>
 
